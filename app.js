@@ -11,18 +11,12 @@ function betterWeather() {
   body.style.background =
     'rgba(255, 255, 255)' + ' url("./images/metsä.jpg")' + 'no-repeat';
   body.style.backgroundSize = 'cover';
-  // nameoutput.innerHTML = name.value;
-  // nameoutput.style.fontSize = '7em';
-  // nameoutput.style.color = '#00ffff';
   name.style.display = 'none';
   header.style.fontSize = '7em';
   header.style.color = '#00ffff';
   weatherButton.style.display = 'none';
   time.style.color = 'orange';
   WhatTimeIsIt();
-}
-if (startTime() < 22) {
-  console.log('on alle 22');
 }
 
 function checkTime(i) {
