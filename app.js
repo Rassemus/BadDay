@@ -14,6 +14,7 @@ function betterWeather() {
   header.style.color = '#00ffff';
   weatherButton.style.display = 'none';
   time.style.color = 'orange';
+  WhatTimeIsis();
 }
 
 function checkTime(i) {
@@ -23,11 +24,17 @@ function checkTime(i) {
   return i;
 }
 
+function WhatTimeIsis() {
+  if (h < 18) {
+    console.log('kello on alle 18');
+  }
+}
+
 function startTime() {
-  var today = new Date();
-  var h = today.getHours();
-  var m = today.getMinutes();
-  var s = today.getSeconds();
+  let today = new Date();
+  let h = today.getHours();
+  let m = today.getMinutes();
+  let s = today.getSeconds();
   m = checkTime(m);
   s = checkTime(s);
   time.innerHTML = h + ':' + m + ':' + s;
