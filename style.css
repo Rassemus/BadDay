@@ -22,7 +22,17 @@ body {
 .header {
   font-size: 8em;
   color: rgb(255, 255, 255);
-  margin-bottom: 0.5em;
+  margin-bottom: 0.1em;
+}
+.name {
+  border: none;
+  border-radius: 7px;
+  max-width: 9.9em;
+  height: 2em;
+  text-align: center;
+  font-size: 2em;
+  background-color: rgb(75, 74, 74, 0.7);
+  margin-bottom: 1.5em;
 }
 .weather__button {
   min-width: 10em;
