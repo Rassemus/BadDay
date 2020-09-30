@@ -24,12 +24,6 @@ function checkTime(i) {
   return i;
 }
 
-function WhatTimeIsis() {
-  if (h < 18) {
-    console.log('kello on alle 18');
-  }
-}
-
 function startTime() {
   let today = new Date();
   let h = today.getHours();
