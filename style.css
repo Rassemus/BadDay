@@ -32,7 +32,7 @@ body {
   text-align: center;
   font-size: 2em;
   background-color: rgb(75, 74, 74, 0.7);
-  margin-bottom: 0.5em;
+  margin-bottom: 0.2em;
 }
 .weather__button {
   min-width: 10em;

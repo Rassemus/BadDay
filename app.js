@@ -44,13 +44,16 @@ startTime();
 function WhatTimeIsIt() {
   let now = new Date();
   let h = now.getHours();
-
-  if (h > 0 && h < 11) {
-    header.innerHTML = name.value + ', This is going to be a great day!';
-  }
-  if (h > 9 && h < 19) {
-    header.innerHTML = name.value + ', Today is a great day!';
+  if (name.value) {
+    if (h > 0 && h < 11) {
+      header.innerHTML = name.value + ', this is going to be a great day!';
+    }
+    if (h > 11 && h < 19) {
+      header.innerHTML = name.value + ', today is a great day!';
+    } else {
+      header.innerHTML = name.value + ', it was a great day!';
+    }
   } else {
-    header.innerHTML = name.value + ', it was a great day!';
+    header.innerHTML = "I don't know your name";
   }
 }
