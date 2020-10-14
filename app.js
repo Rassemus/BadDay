@@ -5,8 +5,11 @@ const weatherButton = document.querySelector('#weather__button');
 const time = document.querySelector('#time');
 const name = document.querySelector('#name');
 const nameoutput = document.querySelector('#outputname');
+const giveName = document.querySelector("#giveName")
+
 
 function betterWeather() {
+  if(name.value){
   rain.style.background = 'none';
   body.style.background =
     'rgba(255, 255, 255)' + ' url("./images/metsä.jpg")' + 'no-repeat';
@@ -16,8 +19,14 @@ function betterWeather() {
   header.style.color = '#00ffff';
   weatherButton.style.display = 'none';
   time.style.color = 'orange';
+  giveName.style.display = "none"
   WhatTimeIsIt();
+  }else{
+    giveName.innerHTML = "Give me a name!"
+  }
 }
+
+
 
 function checkTime(i) {
   if (i < 10) {
@@ -48,12 +57,11 @@ function WhatTimeIsIt() {
     if (h > 0 && h < 11) {
       header.innerHTML = name.value + ', this is going to be a great day!';
     }
-    if (h > 11 && h < 19) {
+    else if (h >= 11 && h < 19) {
       header.innerHTML = name.value + ', today is a great day!';
     } else {
       header.innerHTML = name.value + ', it was a great day!';
     }
-  } else {
-    header.innerHTML = "I don't know your name";
+  
   }
-}
+ }
